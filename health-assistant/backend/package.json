@@ -1,0 +1,12 @@
+{
+  "name": "health-assistant-backend",
+  "version": "1.0.0",
+  "description": "Backend for the Health Assistant application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
