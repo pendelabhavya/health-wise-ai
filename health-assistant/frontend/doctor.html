@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-md">
+            <div class="p-6">
+                <div class="flex items-center">
+                    <img src="https://img.icons8.com/color/48/000000/medical-doctor.png" alt="Logo" class="h-10 w-10">
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold">Health Assistant</h1>
+                        <p class="text-sm text-gray-500">Doctor Dashboard</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="mt-6">
+                <a href="#" class="flex items-center px-6 py-3 text-gray-700 bg-gray-200">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/home.png" alt="Home" class="h-6 w-6">
+                    <span class="mx-3">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-200">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/user.png" alt="Patients" class="h-6 w-6">
+                    <span class="mx-3">Patients</span>
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-200">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/calendar.png" alt="Appointments" class="h-6 w-6">
+                    <span class="mx-3">Appointments</span>
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-200">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/alarm.png" alt="Schedules" class="h-6 w-6">
+                    <span class="mx-3">Schedules</span>
+                </a>
+                <a href="index.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-200">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/user.png" alt="Patient View" class="h-6 w-6">
+                    <span class="mx-3">Patient View</span>
+                </a>
+            </nav>
+            <div class="absolute bottom-0 left-0 w-64 p-6">
+                <div class="flex items-center">
+                    <div class="h-10 w-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">D</div>
+                    <div class="ml-3">
+                        <p class="text-sm font-semibold">Dr. Anjali Patel</p>
+                        <p class="text-xs text-gray-500">Pediatrics</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 p-10">
+            <header>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="text-4xl font-bold">Doctor Dashboard</h1>
+                        <p class="text-gray-500 mt-2">Monitor patients and manage schedules</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <h2 class="text-xl font-bold mt-4">Total Patients</h2>
+                    <p id="total-patients" class="text-3xl font-bold text-blue-600">0</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <h2 class="text-xl font-bold mt-4">Bookings</h2>
+                    <p id="total-bookings" class="text-3xl font-bold text-blue-600">0</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold">Doctor's Progress</h2>
+                    <p>Completed: <span id="progress-completed">0</span></p>
+                    <p>Pending: <span id="progress-pending">0</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold">Reminders</h2>
+                    <ul id="reminders-list"></ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-1 gap-6 mt-10">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold">Day-to-Day Monitoring</h2>
+                    <div id="monitoring-chart"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="doctor.js"></script>
+</body>
+</html>
